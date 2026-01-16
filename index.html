@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A welcoming church community — service times, sermons, events, and ways to connect." />
+  <title>UUNIDOS EM CRISTO DE CAMPINAS — Welcome</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonts chosen for a modern, warm church feel -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Go to homepage">
+        <!-- Replace src with your logo file name, e.g. logo.png -->
+        <img class="brand-logo" src="images/church logo.png" alt="CHURCH_NAME logo" onerror="this.style.display='none'" />
+        <div class="brand-text">
+          <span class="brand-name">UUNIDOS EM CRISTO DE CAMPINAS</span>
+          <span class="brand-tagline">A place to belong • A faith to build on</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="nav" id="primary-nav">
+        <a href="#new-here">New Here</a>
+        <a href="#service-times">Service Times</a>
+        <a href="#sermons">Sermons</a>
+        <a href="#events">Events</a>
+        <a href="#ministries">Ministries</a>
+        <a href="#give" class="btn btn-small">Give</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="pill">
+            <span class="dot" aria-hidden="true"></span>
+            Join us this Sunday
+          </p>
+          <h1>Welcome to <span class="accent">UNIDOS EM CRISTO DE CAMPINAS</span></h1>
+          <p class="lead">
+            We're a community centered on Jesus, committed to loving God and loving people.
+            Whether you've been in church for years or you're exploring faith—there's a place for you here.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#new-here">Plan Your Visit</a>
+            <a class="btn btn-ghost" href="#service-times">See Service Times</a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="meta-card">
+              <div class="meta-title">Location</div>
+              <div class="meta-value">1102 Av. Célso Silveira Rezende
+                Campinas, State of São Paulo
+              </div>
+              <a class="meta-link" href="#contact">Directions →</a>
+            </div>
+            <div class="meta-card">
+              <div class="meta-title">Next Service</div>
+              <div class="meta-value" id="nextServiceText">Sunday • 06:00 PM</div>
+              <button class="meta-link link-btn" id="addReminderBtn" type="button">Add reminder →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card" role="region" aria-label="Quick info">
+          <div class="hero-card-top">
+            <h2>Service Times</h2>
+            <p class="muted">Come as you are. We'd love to meet you.</p>
+          </div>
+
+          <div class="service-list" id="service-times">
+            <div class="service-item">
+              <div class="service-day">Sunday</div>
+              <div class="service-time">06:00 PM</div>
+              <div class="service-note">Traditional</div>
+            </div>
+            <div class="service-item">
+              <div class="service-day">Sunday</div>
+              <div class="service-time">06:30 PM</div>
+              <div class="service-note">Modern</div>
+            </div>
+            <div class="service-item">
+              <div class="service-day">Wednesday</div>
+              <div class="service-time">08:00 PM</div>
+              <div class="service-note">Bible Study</div>
+            </div>
+          </div>
+
+          <div class="hero-card-actions">
+            <a class="btn btn-small" href="#contact">Get Directions</a>
+            <a class="btn btn-small btn-ghost" href="#new-here">What to Expect</a>
+          </div>
+
+          <p class="tiny muted">
+            Need childcare? We offer kids & youth programs during Sunday services.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW HERE -->
+    <section class="section" id="new-here">
+      <div class="container">
+        <div class="section-head">
+          <h2>New here? You're welcome.</h2>
+          <p class="muted">
+            Visiting a new church can feel like a big step. Here's what you can expect when you arrive.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Come as you are</h3>
+            <p class="muted">There's no dress code. You'll see everything from jeans to suits.</p>
+          </article>
+          <article class="card">
+            <h3>Family-friendly</h3>
+            <p class="muted">Safe, fun, and engaging kids and youth environments during services.</p>
+          </article>
+          <article class="card">
+            <h3>Warm & simple</h3>
+            <p class="muted">A friendly welcome, worship music, and a practical message from Scripture.</p>
+          </article>
+        </div>
+
+        <div class="cta-row">
+          <div class="cta">
+            <h3>Plan your visit</h3>
+            <p class="muted">Let us know you're coming and we'll help you feel at home.</p>
+          </div>
+          <form class="form" id="visitForm">
+            <label class="field">
+              <span>Name</span>
+              <input name="name" type="text" placeholder="Your name" required />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input name="email" type="email" placeholder="you@example.com" required />
+            </label>
+            <button class="btn" type="submit">Request Welcome</button>
+            <p class="tiny muted" id="visitFormMsg" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERMONS -->
+    <section class="section section-alt" id="sermons">
+      <div class="container">
+        <div class="section-head">
+          <h2>Sermons</h2>
+          <p class="muted">
+            Watch recent messages and share them with friends. (You can link to YouTube, Spotify, etc.)
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card media-card">
+            <div class="media-thumb" aria-hidden="true">
+              <span class="media-badge">Latest</span>
+            </div>
+            <h3>Hope in Uncertain Times</h3>
+            <p class="muted">A message about peace, prayer, and steady faith.</p>
+            <div class="media-actions">
+              <a class="btn btn-small" href="#" aria-label="Watch sermon Hope in Uncertain Times">Watch</a>
+              <a class="btn btn-small btn-ghost" href="#" aria-label="Listen to sermon Hope in Uncertain Times">Listen</a>
+            </div>
+          </article>
+
+          <article class="card media-card">
+            <div class="media-thumb" aria-hidden="true"></div>
+            <h3>Love Your Neighbor</h3>
+            <p class="muted">Living out compassion with boldness and humility.</p>
+            <div class="media-actions">
+              <a class="btn btn-small" href="#">Watch</a>
+              <a class="btn btn-small btn-ghost" href="#">Listen</a>
+            </div>
+          </article>
+
+          <article class="card media-card">
+            <div class="media-thumb" aria-hidden="true"></div>
+            <h3>Grace That Changes</h3>
+            <p class="muted">How grace reshapes our hearts and habits.</p>
+            <div class="media-actions">
+              <a class="btn btn-small" href="#">Watch</a>
+              <a class="btn btn-small btn-ghost" href="#">Listen</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="section" id="events">
+      <div class="container">
+        <div class="section-head row">
+          <div>
+            <h2>Upcoming Events</h2>
+            <p class="muted">Add events, groups, and gatherings that help people connect.</p>
+          </div>
+
+          <div class="row-actions">
+            <input class="input" id="eventSearch" type="search" placeholder="Search events..." aria-label="Search events" />
+            <select class="input" id="eventFilter" aria-label="Filter events">
+              <option value="all">All</option>
+              <option value="community">Community</option>
+              <option value="youth">Youth</option>
+              <option value="outreach">Outreach</option>
+              <option value="study">Study</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="events" id="eventList" aria-live="polite"></div>
+
+        <div class="center">
+          <a class="btn btn-ghost" href="#contact">Need info about an event? Contact us →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MINISTRIES -->
+    <section class="section section-alt" id="ministries">
+      <div class="container">
+        <div class="section-head">
+          <h2>Ministries</h2>
+          <p class="muted">Ways to grow, serve, and build community throughout the week.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Kids</h3>
+            <p class="muted">A safe, joyful environment where kids learn faith through stories and fun.</p>
+            <a class="link" href="#contact">Learn more →</a>
+          </article>
+          <article class="card">
+            <h3>Youth</h3>
+            <p class="muted">A place for students to ask real questions and build strong friendships.</p>
+            <a class="link" href="#contact">Learn more →</a>
+          </article>
+          <article class="card">
+            <h3>Outreach</h3>
+            <p class="muted">Serving our city through compassion, partnership, and practical help.</p>
+            <a class="link" href="#contact">Learn more →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIVE -->
+    <section class="section" id="give">
+      <div class="container">
+        <div class="give">
+          <div>
+            <h2>Give</h2>
+            <p class="muted">
+              Your generosity supports ministry, outreach, and care for people in our community.
+            </p>
+            <ul class="checklist">
+              <li>Secure online giving</li>
+              <li>One-time or recurring</li>
+              <li>Designate to special causes</li>
+            </ul>
+          </div>
+
+          <div class="card give-card">
+            <h3>Quick Give (Demo)</h3>
+            <p class="muted tiny">This is a demo form. Replace with your giving provider link (Tithe.ly, Pushpay, etc.).</p>
+
+            <form id="giveForm" class="form">
+              <label class="field">
+                <span>Amount (USD)</span>
+                <input name="amount" inputmode="decimal" placeholder="50" />
+              </label>
+
+              <label class="field">
+                <span>Frequency</span>
+                <select name="frequency">
+                  <option value="one-time">One-time</option>
+                  <option value="weekly">Weekly</option>
+                  <option value="monthly">Monthly</option>
+                </select>
+              </label>
+
+              <button class="btn" type="submit">Continue</button>
+              <p class="tiny muted" id="giveMsg" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="contact">
+          <div>
+            <h2>Contact</h2>
+            <p class="muted">Questions? Prayer requests? Want to get connected? Reach out anytime.</p>
+
+            <div class="contact-cards">
+              <div class="mini-card">
+                <div class="mini-title">Address</div>
+                <div class="mini-value">1102 Av. Célso Silveira Rezende
+                     Campinas, State of São Paulo
+                </div>
+                <a class="link" href="https://maps.google.com/?q=123%20Main%20St" target="_blank" rel="noreferrer">Open maps →</a>
+              </div>
+              <div class="mini-card">
+                <div class="mini-title">Phone</div>
+                <div class="mini-value">(555) 555-5555</div>
+                <a class="link" href="tel:+15555555555">Call →</a>
+              </div>
+              <div class="mini-card">
+                <div class="mini-title">Email</div>
+                <div class="mini-value">hello@yourchurch.org</div>
+                <a class="link" href="mailto:hello@yourchurch.org">Email →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Send a message</h3>
+            <form class="form" id="contactForm">
+              <label class="field">
+                <span>Name</span>
+                <input name="name" type="text" placeholder="Your name" required />
+              </label>
+              <label class="field">
+                <span>Email</span>
+                <input name="email" type="email" placeholder="you@example.com" required />
+              </label>
+              <label class="field">
+                <span>Message</span>
+                <textarea name="message" rows="4" placeholder="How can we help?" required></textarea>
+              </label>
+
+              <label class="field checkbox">
+                <input name="prayer" type="checkbox" />
+                <span>This is a prayer request</span>
+              </label>
+
+              <button class="btn" type="submit">Send</button>
+              <p class="tiny muted" id="contactMsg" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand">UNIDOS EM CRISTO DE CAMPINAS</div>
+        <p class="tiny muted">© <span id="year"></span> UNIDOS EM CRISTO DE CAMPINAS. All rights reserved.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#top">Back to top ↑</a>
+        <a href="#new-here">New Here</a>
+        <a href="#sermons">Sermons</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
